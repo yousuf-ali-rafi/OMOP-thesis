@@ -1,0 +1,65 @@
+{
+  "project": "OMOP CDM Thesis Sample Data",
+  "description": "Synthetic example of source-to-standard concept mapping and patient-level prediction inputs.",
+  "synthetic_data": true,
+  "omop_cdm_version": "5.4",
+  "databases": [
+    "omop_1",
+    "omop_2",
+    "omop_3"
+  ],
+  "mapping_examples": [
+    {
+      "source_field": "gender",
+      "source_value": "Male",
+      "target_field": "PERSON.gender_concept_id",
+      "standard_concept_id": 8507,
+      "mapping_status": "mapped"
+    },
+    {
+      "source_field": "gender",
+      "source_value": "Female",
+      "target_field": "PERSON.gender_concept_id",
+      "standard_concept_id": 8532,
+      "mapping_status": "mapped"
+    },
+    {
+      "source_field": "gender",
+      "source_value": "Unknown",
+      "target_field": "PERSON.gender_concept_id",
+      "standard_concept_id": 0,
+      "mapping_status": "unmapped",
+      "source_value_preserved": true
+    }
+  ],
+  "patients": [
+    {
+      "person_source_value": "SYNTHETIC_001",
+      "gender_concept_id": 8507,
+      "gender_source_value": "Male",
+      "year_of_birth": 1978,
+      "inpatient_visits": 1,
+      "outpatient_visits": 4,
+      "emergency_visits": 1,
+      "condition_occurrence_count": 3,
+      "drug_exposure_count": 5,
+      "procedure_occurrence_count": 2,
+      "measurement_value": 1.12,
+      "target_outcome": 0
+    },
+    {
+      "person_source_value": "SYNTHETIC_002",
+      "gender_concept_id": 8532,
+      "gender_source_value": "Female",
+      "year_of_birth": 1965,
+      "inpatient_visits": 2,
+      "outpatient_visits": 6,
+      "emergency_visits": 2,
+      "condition_occurrence_count": 7,
+      "drug_exposure_count": 9,
+      "procedure_occurrence_count": 3,
+      "measurement_value": 1.86,
+      "target_outcome": 1
+    }
+  ]
+}
